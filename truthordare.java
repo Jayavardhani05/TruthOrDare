@@ -5,8 +5,8 @@ class truthordare{
     public static void main(String[]args){
         System.out.println("Game: Truth or Dare");
         Scanner sc=new Scanner(System.in);
-        // System.out.print("Category(kids/adults):");
-        // String Category=sc.nextLine();
+        System.out.print("Category(kids/adults):");
+        String Category=sc.nextLine();
         System.out.print("Number of players:");
         int numberOfPlayers=sc.nextInt();
         sc.nextLine();
@@ -18,15 +18,28 @@ class truthordare{
         while(true){
 
             Random r = new Random();
-            int index = r.nextInt(arr.length);
+            int index = r.nextInt(playerNames.length);
             System.out.println(playerNames[index]+"'s Trun");
             System.out.println("Choose Truth or Dare : ");
             String choice=sc.nextLine();
             if(choice.equalsIgnoreCase("truth")){
-                
-            }
-            else if(choice.equalsIgnoreCase("dare"){
+                if(Category.equalsIgnoreCase("kids")){
 
+                }
+                else{
+                    
+                }
+               break; 
+            }
+            else if(choice.equalsIgnoreCase("dare")){
+                
+                if(Category.equalsIgnoreCase("kids")){
+
+                }
+                else{
+                    
+                }
+                break;
             }
             else{
                 System.out.println("you can only choose between truth or dare");
@@ -34,9 +47,7 @@ class truthordare{
             
 
         }
-        // if(Category.equalsIgnoreCase(kids)){
-            
-        // }
+        
         
     }
 }
