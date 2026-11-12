@@ -242,10 +242,16 @@ class truthordare{
                     int kidsTruthIndex = r.nextInt(kidsTruth.length);
                     System.out.println("Question is "+kidsTruth[kidsTruthIndex]);
                 }
-                else{
+                else if(Category.equalsIgnoreCase("adults")){
                     int adultsTruthIndex = r.nextInt(adultsTruth.length);
                     System.out.println("Question is "+adultsTruth[adultsTruthIndex]);
                     
+                }
+                else{
+                    System.out.println("you can only choose between kids or adults");
+                    System.out.print("Category(kids/adults):");
+                    Category=sc.nextLine();
+
                 }
             }
             else if(choice.equalsIgnoreCase("dare")){
@@ -255,10 +261,16 @@ class truthordare{
                     System.out.println("Dare is "+kidsDare[kidsDareIndex]);
 
                 }
-                else{
+                else if(Category.equalsIgnoreCase("adults")){
                     int adultsDareIndex = r.nextInt(adultsDare.length);
                     System.out.println("Dare is "+adultsDare[adultsDareIndex]);
                     
+                }
+                else{
+                    System.out.println("you can only choose between kids or adults");
+                    System.out.print("Category(kids/adults):");
+                    Category=sc.nextLine();
+
                 }
             }
             else{
