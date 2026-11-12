@@ -263,15 +263,22 @@ class truthordare{
             }
             else{
                 System.out.println("you can only choose between truth or dare");
+                System.out.print("Choose Truth or Dare : ");
+                choice=sc.nextLine();
             }
                 
-                System.out.println("To move on to nxt person enter next or to end game enter end");
+                System.out.print("To move on to nxt person enter next or to end game enter end : ");
                 Continue=sc.nextLine();
                
             
             }
-            else{
+            else if(Continue.equalsIgnoreCase("end")){
                 break;
+            }
+            else{
+                System.out.println("enter valid options");
+                System.out.print("To move on to nxt person enter next or to end game enter end : ");
+                Continue=sc.nextLine();
             }
 
         }
