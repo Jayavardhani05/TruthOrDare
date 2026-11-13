@@ -245,36 +245,41 @@ class truthordare{
             System.out.println(playerNames[index]+"'s Turn");
             System.out.print("Choose Truth or Dare : ");
             String choice=sc.nextLine();
-                if(choice.equalsIgnoreCase("truth")){
-                    if(Category.equalsIgnoreCase("kids")){
-                        int kidsTruthIndex = r.nextInt(kidsTruth.length);
-                        System.out.println("Question is "+kidsTruth[kidsTruthIndex]);
-                    }
-                    else {
-                        int adultsTruthIndex = r.nextInt(adultsTruth.length);
-                        System.out.println("Question is "+adultsTruth[adultsTruthIndex]);
-                    
-                    }
-              
-                }
-                else if(choice.equalsIgnoreCase("dare")){
-                
-                    if(Category.equalsIgnoreCase("kids")){
-                        int kidsDareIndex = r.nextInt(kidsDare.length);
-                        System.out.println("Dare is "+kidsDare[kidsDareIndex]);
-
-                    }
-                    else {
-                        int adultsDareIndex = r.nextInt(adultsDare.length);
-                        System.out.println("Dare is "+adultsDare[adultsDareIndex]);
+                while(true){
+                    if(choice.equalsIgnoreCase("truth")){
+                        if(Category.equalsIgnoreCase("kids")){
+                            int kidsTruthIndex = r.nextInt(kidsTruth.length);
+                            System.out.println("Question is "+kidsTruth[kidsTruthIndex]);
+                        }
+                        else {
+                            int adultsTruthIndex = r.nextInt(adultsTruth.length);
+                            System.out.println("Question is "+adultsTruth[adultsTruthIndex]);
                         
+                        }
+                        break;
+                
                     }
-               
-                }
-                else{
-                    System.out.println("You can only choose between truth or dare");
-                    System.out.print("Choose Truth or Dare : ");
-                    choice=sc.nextLine();
+                
+                    else if(choice.equalsIgnoreCase("dare")){
+                    
+                        if(Category.equalsIgnoreCase("kids")){
+                            int kidsDareIndex = r.nextInt(kidsDare.length);
+                            System.out.println("Dare is "+kidsDare[kidsDareIndex]);
+
+                        }
+                        else {
+                            int adultsDareIndex = r.nextInt(adultsDare.length);
+                            System.out.println("Dare is "+adultsDare[adultsDareIndex]);
+                            
+                        }
+                        break;
+                
+                    }
+                    else{
+                        System.out.println("You can only choose between truth or dare");
+                        System.out.print("Choose Truth or Dare : ");
+                        choice=sc.nextLine();
+                    }
                 }
                 
                 System.out.print("To move on to nxt person enter next or to end game enter end : ");
