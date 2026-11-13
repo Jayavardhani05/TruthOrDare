@@ -15,6 +15,14 @@ class truthordare{
         }
         System.out.print("Category(kids/adults):");
         String Category=sc.nextLine();
+        while(true){
+            if(Category.equalsIgnoreCase("kids")|| Category.equalsIgnoreCase("adults")){
+                break;
+            }else{
+                System.out.print("Please choose either the Kids/Adults Category: ");
+                Category=sc.nextLine();
+            }
+        }
         String[] kidsTruth = {
         "What is your funniest childhood memory?",
         "What is your favourite cartoon?",
@@ -237,47 +245,37 @@ class truthordare{
             System.out.println(playerNames[index]+"'s Turn");
             System.out.print("Choose Truth or Dare : ");
             String choice=sc.nextLine();
-            if(choice.equalsIgnoreCase("truth")){
-                if(Category.equalsIgnoreCase("kids")){
-                    int kidsTruthIndex = r.nextInt(kidsTruth.length);
-                    System.out.println("Question is "+kidsTruth[kidsTruthIndex]);
-                }
-                else if(Category.equalsIgnoreCase("adults")){
-                    int adultsTruthIndex = r.nextInt(adultsTruth.length);
-                    System.out.println("Question is "+adultsTruth[adultsTruthIndex]);
+                if(choice.equalsIgnoreCase("truth")){
+                    if(Category.equalsIgnoreCase("kids")){
+                        int kidsTruthIndex = r.nextInt(kidsTruth.length);
+                        System.out.println("Question is "+kidsTruth[kidsTruthIndex]);
+                    }
+                    else {
+                        int adultsTruthIndex = r.nextInt(adultsTruth.length);
+                        System.out.println("Question is "+adultsTruth[adultsTruthIndex]);
                     
+                    }
+              
                 }
-                else{
-                    System.out.println("You can only choose between kids or adults");
-                    System.out.print("Category(kids/adults):");
-                    Category=sc.nextLine();
-
-                }
-            }
-            else if(choice.equalsIgnoreCase("dare")){
+                else if(choice.equalsIgnoreCase("dare")){
                 
-                if(Category.equalsIgnoreCase("kids")){
-                    int kidsDareIndex = r.nextInt(kidsDare.length);
-                    System.out.println("Dare is "+kidsDare[kidsDareIndex]);
+                    if(Category.equalsIgnoreCase("kids")){
+                        int kidsDareIndex = r.nextInt(kidsDare.length);
+                        System.out.println("Dare is "+kidsDare[kidsDareIndex]);
 
-                }
-                else if(Category.equalsIgnoreCase("adults")){
-                    int adultsDareIndex = r.nextInt(adultsDare.length);
-                    System.out.println("Dare is "+adultsDare[adultsDareIndex]);
-                    
+                    }
+                    else {
+                        int adultsDareIndex = r.nextInt(adultsDare.length);
+                        System.out.println("Dare is "+adultsDare[adultsDareIndex]);
+                        
+                    }
+               
                 }
                 else{
-                    System.out.println("You can only choose between kids or adults");
-                    System.out.print("Category(kids/adults):");
-                    Category=sc.nextLine();
-
+                    System.out.println("You can only choose between truth or dare");
+                    System.out.print("Choose Truth or Dare : ");
+                    choice=sc.nextLine();
                 }
-            }
-            else{
-                System.out.println("You can only choose between truth or dare");
-                System.out.print("Choose Truth or Dare : ");
-                choice=sc.nextLine();
-            }
                 
                 System.out.print("To move on to nxt person enter next or to end game enter end : ");
                 Continue=sc.nextLine();
@@ -295,7 +293,5 @@ class truthordare{
             }
 
         }
-        
-        
     }
 }
